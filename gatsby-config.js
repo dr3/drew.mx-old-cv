@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-minimal-portfolio-blog',
-    author: 'Sai Krishna',
+    title: '🙈 Drew McMillan',
+    author: 'Drew McMillan',
     description:
-      'GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.',
-    siteUrl: 'https://saikrishna.me',
+      'Personal website of Drew McMillan, a software engineer in London, UK. Drew is currently working at BBC News on a brand new React/Node stack and has a strong interest in all things frontend web.',
+    siteUrl: 'https://new.drew.mx',
   },
   pathPrefix: '/',
   plugins: [
@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
     `gatsby-plugin-feed`,
@@ -67,5 +67,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-styled-components`,
   ],
-}
+};
