@@ -1,12 +1,14 @@
 {
-  "name": "gatsby-minimal-portfolio-blog",
-  "description": "GatsbyJS starter for a minimal portfolio website with blog. Suitable for developers.",
-  "version": "1.0.0",
-  "author": "Sai Krishna",
+  "name": "drewmx",
+  "description": "Drew McMillan's personal site",
+  "version": "0.0.1",
+  "author": "Drew McMillan",
   "bugs": {
-    "url": "https://github.com/s-kris/gatsby-minimal-portfolio-blog/issues"
+    "url": "https://github.com/dr3/drew.mx/issues"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "bluebird": "^3.5.4",
     "gatsby": "^2.0.19",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-google-analytics": "^2.0.5",
@@ -15,6 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.6",
     "gatsby-plugin-sitemap": "^2.0.2",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-remark-copy-linked-files": "^2.0.5",
     "gatsby-remark-images": "^2.0.4",
@@ -34,6 +37,7 @@
     "react-responsive-modal": "^3.5.1",
     "react-typography": "^0.16.13",
     "react-vertical-timeline-component": "^2.3.1",
+    "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
     "typography": "^0.16.17",
@@ -42,7 +46,12 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
@@ -52,17 +61,16 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/s-kris/gatsby-minimal-portfolio-blog.git"
+    "url": "git+https://github.com/dr3/drew.mx.git"
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --fix --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
