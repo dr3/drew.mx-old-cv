@@ -1,4 +1,9 @@
-<h1 align="center">🎉 <a href="https://drew.mx">drew.mx</a> 🎉</h1>
+<h1 align="center">
+  🎉 <a href="https://drew.mx">drew.mx</a> 🎉
+</h1>
+<div align="center">
+  <img src="https://travis-ci.com/dr3/drew.mx.svg?branch=latest" alt="Travis build status" />
+</div>
 
 Drew McMillan's personal Gatsby & React site.
 
