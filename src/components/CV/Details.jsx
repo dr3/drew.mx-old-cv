@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blue } from '../utils';
+import { blue } from './utils';
 
 const Wrapper = styled.div`
   align-self: center;
@@ -19,12 +19,13 @@ const Label = styled.span`
 
 const Details = ({ values }) => (
   <Wrapper>
-    {values.map(({ label, text }) => (
-      <DetailWrapper key={label || text}>
-        {label && <Label>{label}: </Label>}
-        {text && <span>{text}</span>}
-      </DetailWrapper>
-    ))}
+    {values &&
+      values.map(({ label, text }) => (
+        <DetailWrapper key={label || text}>
+          {label && <Label>{label}: </Label>}
+          {text && <span>{text}</span>}
+        </DetailWrapper>
+      ))}
   </Wrapper>
 );
 

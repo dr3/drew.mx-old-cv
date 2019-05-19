@@ -3,12 +3,12 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import get from '../../utils/deepGet';
-import cvData from '../../../data/config/cv';
+import get from '../utils/deepGet';
+import cvData from '../../data/config/cv';
 
-import Header from './components/Header';
-import Section from './components/Section';
-import Wrapper from './components/Wrapper';
+import Header from '../components/CV/Header';
+import Section from '../components/CV/Section';
+import Wrapper from '../components/CV/Wrapper';
 
 const GlobalStyle = createGlobalStyle`
   @page {

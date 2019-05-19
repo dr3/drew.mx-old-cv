@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontFamily } from '../utils';
+import { fontFamily } from './utils';
 
 const Wrapper = styled.div`
   max-width: 57rem;

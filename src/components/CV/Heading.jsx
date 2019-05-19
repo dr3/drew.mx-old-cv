@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fontFamily, blue } from '../utils';
+import { fontFamily, blue } from './utils';
 
 const StyledName = styled.span`
   font-size: 3.75rem;
