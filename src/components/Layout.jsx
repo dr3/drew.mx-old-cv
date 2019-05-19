@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
-import Header from './Header';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -13,7 +12,6 @@ const LayoutWrapper = styled.div`
 
 const Layout = ({ children }) => (
   <LayoutWrapper>
-    <Header />
     <Navbar />
     <br />
     {children}

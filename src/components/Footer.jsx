@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { repoUrl } from '../../data/config/site';
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -17,6 +18,10 @@ const Footer = () => (
     Built with&nbsp;
     <a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">
       GatsbyJS
+    </a>
+    &nbsp;&#45;&nbsp;Open source on&nbsp;
+    <a href={repoUrl} target="_blank" rel="noopener noreferrer">
+      Github
     </a>
   </FooterWrapper>
 );

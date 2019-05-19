@@ -25,7 +25,7 @@ const SiteIndex = ({ data }) => {
         <meta name="description" content={siteDescription} />
       </Hemlet>
       <Heading>
-        Hey! I&apos;m Drew{' '}
+        Hey! I&apos;m Drew&nbsp;
         <span role="img" aria-label="Wave emoji">
           👋
         </span>
