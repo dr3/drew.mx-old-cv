@@ -12,4 +12,7 @@ node_js:
 
 script:
   - npm install
-  - npm run lint
+  - npm run deploy
+
+after_success:
+  - bash ./scripts/deploy
