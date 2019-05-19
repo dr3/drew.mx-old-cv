@@ -7,7 +7,6 @@ import 'typeface-merriweather';
 
 import profilePic from '../assets/images/avatar.png';
 import { rhythm } from '../utils/typography';
-import bioData from '../data/bio';
 
 const BioWrapper = styled.div`
   display: flex;
@@ -21,10 +20,10 @@ const BioImage = styled.img`
   height: ${rhythm(2)};
 `;
 
-const Bio = () => (
+const Bio = ({ userBio }) => (
   <BioWrapper>
     <BioImage src={profilePic} alt="Sai Krishna" />
-    <p>{bioData}</p>
+    <div dangerouslySetInnerHTML={{ __html: userBio.html }} />
   </BioWrapper>
 );
 

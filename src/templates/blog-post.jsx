@@ -25,8 +25,9 @@ const StyledUnorderedList = styled.ul`
 `;
 
 const BlogPostTemplate = ({ data, location, pageContext }) => {
-  const post = get(['markdownRemark'], data);
+  const post = get(['blogPost'], data);
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
+  const userBio = get(['descriptions', 'edges', 0, 'node'], data);
   const siteDescription = post.excerpt;
   const { previous, next } = pageContext;
 
@@ -47,7 +48,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           marginBottom: rhythm(1),
         }}
       />
-      <Bio />
+      <Bio userBio={userBio} />
       <StyledUnorderedList>
         <li>
           {previous && (
@@ -78,7 +79,18 @@ export const query = graphql`
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $slug } }) {
+    descriptions: allMarkdownRemark(
+      filter: {
+        frontmatter: { type: { eq: "description" }, id: { eq: "user-bio" } }
+      }
+    ) {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+    blogPost: markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       excerpt
       html

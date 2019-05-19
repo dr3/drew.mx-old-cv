@@ -30,7 +30,7 @@ const SiteIndex = ({ data }) => {
           👋
         </span>
       </Heading>
-      <div dangerouslySetInnerHTML={{ __html: description }} /> 
+      <div dangerouslySetInnerHTML={{ __html: description }} />
       <br />
       {posts && <BlogList posts={posts} />}
       <Link to="/blog">See more blog posts →</Link>
