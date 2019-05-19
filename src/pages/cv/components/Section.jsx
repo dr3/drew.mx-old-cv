@@ -79,14 +79,15 @@ const Section = ({ title, subsections }) => {
           <span>{title}</span>
         </SectionTitle>
       </Row>
-      {subsections.map(({ label, title: subsectionTitle, body }) => (
-        <Row label={label} key={label || subsectionTitle || body[0]}>
-          {subsectionTitle && (
-            <SubsectionTitle>{subsectionTitle}</SubsectionTitle>
-          )}
-          {body && body.map(text => <p key={text}>{text}</p>)}
-        </Row>
-      ))}
+      {subsections &&
+        subsections.map(({ label, title: subsectionTitle, body }) => (
+          <Row label={label} key={label || subsectionTitle || body[0]}>
+            {subsectionTitle && (
+              <SubsectionTitle>{subsectionTitle}</SubsectionTitle>
+            )}
+            {body && body.map(text => <p key={text}>{text}</p>)}
+          </Row>
+        ))}
     </div>
   );
 };
