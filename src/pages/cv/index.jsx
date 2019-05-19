@@ -22,7 +22,9 @@ const Contact = ({ data }) => {
       />
       <Header {...cvData} />
       {cvData.sections &&
-        cvData.sections.map(section => <Section {...section} />)}
+        cvData.sections.map(section => (
+          <Section key={section.title} {...section} />
+        ))}
     </Wrapper>
   );
 };

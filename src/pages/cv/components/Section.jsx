@@ -47,6 +47,7 @@ const StyledLine = styled.div`
 
 const RowLabel = styled.div`
   text-align: right;
+  margin-bottom: 0.8125rem;
 
   @media (max-width: 47rem) {
     font-weight: bold;
@@ -65,9 +66,7 @@ const SubsectionTitle = styled.p`
 
 const Row = ({ label, children }) => (
   <StyledRow>
-    <RowLabel>
-      <p>{label}</p>
-    </RowLabel>
+    <RowLabel>{label}</RowLabel>
     <div>{children}</div>
   </StyledRow>
 );
@@ -82,12 +81,12 @@ const Section = ({ title, subsections }) => {
           <span>{title}</span>
         </SectionTitle>
       </Row>
-      {subsections.map(subsection => (
-        <Row label={subsection.label}>
-          {subsection.title && (
-            <SubsectionTitle>{subsection.title}</SubsectionTitle>
+      {subsections.map(({ label, title: subsectionTitle, body }) => (
+        <Row label={label} key={label || subsectionTitle || body[0]}>
+          {subsectionTitle && (
+            <SubsectionTitle>{subsectionTitle}</SubsectionTitle>
           )}
-          {subsection.body && subsection.body.map(text => <p>{text}</p>)}
+          {body && body.map(text => <p key={text}>{text}</p>)}
         </Row>
       ))}
     </div>
