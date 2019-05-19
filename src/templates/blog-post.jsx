@@ -22,6 +22,7 @@ const StyledUnorderedList = styled.ul`
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin: 0;
 `;
 
 const BlogPostTemplate = ({ data, location, pageContext }) => {
