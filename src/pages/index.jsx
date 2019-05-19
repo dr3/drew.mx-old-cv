@@ -7,9 +7,34 @@ import get from '../utils/deepGet';
 
 import BlogList from '../components/BlogList';
 import Layout from '../components/Layout';
+import profilePic from '../assets/images/avatar.jpg';
+import { author } from '../../data/config/site';
 
 const Heading = styled('h1')`
   border: none;
+  margin-top: 2.5rem;
+`;
+
+const DescriptionWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 1rem;
+
+  @media (max-width: 45rem) {
+    display: initial;
+  }
+`;
+
+const DescriptionImage = styled.img`
+  margin-top: 2.5rem;
+  border-radius: 50%;
+  align-self: center;
+
+  @media (max-width: 45rem) {
+    max-width: 15rem;
+    margin: 0 auto;
+    display: block;
+  }
 `;
 
 const SiteIndex = ({ data }) => {
@@ -24,13 +49,18 @@ const SiteIndex = ({ data }) => {
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Hemlet>
-      <Heading>
-        Hey! I&apos;m Drew&nbsp;
-        <span role="img" aria-label="Wave emoji">
-          👋
-        </span>
-      </Heading>
-      <div dangerouslySetInnerHTML={{ __html: description }} />
+      <DescriptionWrapper>
+        <div>
+          <Heading>
+            Hey! I&apos;m Drew&nbsp;
+            <span role="img" aria-label="Wave emoji">
+              👋
+            </span>
+          </Heading>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+        </div>
+        <DescriptionImage src={profilePic} alt={author} />
+      </DescriptionWrapper>
       <br />
       {posts && <BlogList posts={posts} />}
       <Link to="/blog">See more blog posts →</Link>
