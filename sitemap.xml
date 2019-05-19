@@ -4,5 +4,6 @@
 <url> <loc>https://new.drew.mx/blog/hello-world/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://new.drew.mx/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://new.drew.mx/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://new.drew.mx/cv/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://new.drew.mx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
