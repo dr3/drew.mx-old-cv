@@ -35,6 +35,10 @@ const DescriptionImage = styled.img`
     margin: 0 auto;
     display: block;
   }
+
+  @media (max-width: 15rem) {
+    width: 100%;
+  }
 `;
 
 const SiteIndex = ({ data }) => {

@@ -10,6 +10,10 @@ const NavWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+
+  @media (min-width: 21rem) {
+    padding-bottom: 2rem;
+  }
 `;
 
 const NavInner = styled.div`
@@ -18,6 +22,13 @@ const NavInner = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 21rem) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-gap: 1rem;
+  }
 `;
 
 const Navbar = () => (

@@ -38,7 +38,6 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`${post.frontmatter.title} | ${siteTitle}`}
       />
-      <Link to="/blog">&larr; Blog</Link>
       <h1>{post.frontmatter.title}</h1>
       <br />
       <StyledTimestamp>{post.frontmatter.date}</StyledTimestamp>
