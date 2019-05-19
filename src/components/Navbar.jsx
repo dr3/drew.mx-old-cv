@@ -31,6 +31,12 @@ const NavInner = styled.div`
   }
 `;
 
+const LinkHiddenMobile = styled(Link)`
+  @media (max-width: 21rem) {
+    display: none;
+  }
+`;
+
 const Navbar = () => (
   <NavWrapper>
     <NavInner>
@@ -40,6 +46,7 @@ const Navbar = () => (
       </a>
       <Link to="/contact">Contact</Link>
       <Link to="/blog">Blog</Link>
+      <LinkHiddenMobile to="/cv">CV</LinkHiddenMobile>
     </NavInner>
   </NavWrapper>
 );
