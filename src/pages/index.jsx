@@ -1,14 +1,20 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import { Link, graphql } from 'gatsby';
 import Hemlet from 'react-helmet';
 import get from '../utils/deepGet';
 
+import BlogList from '../components/BlogList';
 import Layout from '../components/Layout';
-import DisplayImage from '../assets/images/main_image.jpg';
+
+const Heading = styled('h1')`
+  border: none;
+`;
 
 const SiteIndex = ({ data }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
   const siteDescription = get(['site', 'siteMetadata', 'title'], data);
+  const posts = get(['allMarkdownRemark', 'edges'], data);
 
   return (
     <Layout>
@@ -16,6 +22,12 @@ const SiteIndex = ({ data }) => {
         <title>{siteTitle}</title>
         <meta name="description" content={siteDescription} />
       </Hemlet>
+      <Heading>
+        Hey! I&apos;m Drew{' '}
+        <span role="img" aria-label="Wave emoji">
+          👋
+        </span>
+      </Heading>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu
@@ -31,7 +43,9 @@ const SiteIndex = ({ data }) => {
         adipiscing enim. Amet massa vitae tortor condimentum lacinia quis vel
         eros donec.
       </p>
-      <img src={DisplayImage} alt={siteTitle} />
+      <br />
+      {posts && <BlogList posts={posts} />}
+      <Link to="/blog">See more blog posts →</Link>
     </Layout>
   );
 };
@@ -44,6 +58,26 @@ export const query = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "post" } } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            path
+            type
+          }
+        }
       }
     }
   }

@@ -8,9 +8,8 @@ const Heading = styled.h3`
   margin-bottom: ${rhythm(1 / 4)};
 `;
 
-const Bio = ({ posts, title }) => (
+const Bio = ({ posts }) => (
   <Fragment>
-    <h2>{title}</h2>
     {posts.map(({ node }) => {
       const title =
         get(['frontmatter', 'title'], node) ||

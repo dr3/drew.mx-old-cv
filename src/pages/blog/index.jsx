@@ -19,6 +19,7 @@ const BlogIndex = ({ data, location }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`Blog | ${siteTitle}`}
       />
+      <h2>Blog</h2>
       <BlogList posts={posts} title="Blog" />
     </Layout>
   );
