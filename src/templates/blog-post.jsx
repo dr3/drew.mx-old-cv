@@ -25,6 +25,22 @@ const StyledUnorderedList = styled.ul`
   margin: 0;
 `;
 
+const StyledDraftWarning = styled.div`
+  font-size: 3rem;
+  color: red;
+  text-align: center;
+`;
+
+const DraftWarning = () => (
+  <StyledDraftWarning>
+    This is a draft blog post which is not quite finished. Please do not share
+    this URL with anyone{' '}
+    <span role="img" aria-label="See no evil emoji">
+      🙈
+    </span>
+  </StyledDraftWarning>
+);
+
 const BlogPostTemplate = ({ data, location, pageContext }) => {
   const post = get(['blogPost'], data);
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
@@ -39,6 +55,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`${post.frontmatter.title} | ${siteTitle}`}
       />
+      {post.frontmatter.draft && <DraftWarning />}
       <h1>{post.frontmatter.title}</h1>
       <br />
       <StyledTimestamp>{post.frontmatter.date}</StyledTimestamp>
@@ -98,6 +115,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         path
+        draft
       }
       fields {
         slug

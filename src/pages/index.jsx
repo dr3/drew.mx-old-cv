@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import Hemlet from 'react-helmet';
@@ -65,9 +65,13 @@ const SiteIndex = ({ data }) => {
         </div>
         <DescriptionImage src={profilePic} alt={author} />
       </DescriptionWrapper>
-      <br />
-      {posts && <BlogList posts={posts} />}
-      <Link to="/blog">See more blog posts →</Link>
+      {posts[0] && (
+        <Fragment>
+          <br />
+          <BlogList posts={posts} />
+          <Link to="/blog">See more blog posts →</Link>
+        </Fragment>
+      )}
     </Layout>
   );
 };
@@ -98,7 +102,7 @@ export const query = graphql`
     }
     blogPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "post" } } }
+      filter: { frontmatter: { type: { eq: "post" }, draft: { ne: true } } }
       limit: 1
     ) {
       edges {

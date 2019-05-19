@@ -4,6 +4,7 @@ path: '/blog/hello-testing/'
 date: 2019-03-02T09:14:52+00:00
 author: admin
 type: post
+draft: true
 ---
 
 <!--- All of the above frontmatter fields are mandatory -->

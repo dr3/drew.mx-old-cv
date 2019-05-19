@@ -20,7 +20,11 @@ const BlogIndex = ({ data, location }) => {
         title={`Blog | ${siteTitle}`}
       />
       <h2>Blog</h2>
-      <BlogList posts={posts} title="Blog" />
+      {posts && posts[0] ? (
+        <BlogList posts={posts} title="Blog" />
+      ) : (
+        <p>Blog posts coming soon. Watch this space!</p>
+      )}
     </Layout>
   );
 };
@@ -37,7 +41,7 @@ export const query = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "post" } } }
+      filter: { frontmatter: { type: { eq: "post" }, draft: { ne: true } } }
     ) {
       edges {
         node {
