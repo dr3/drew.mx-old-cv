@@ -1,15 +1,10 @@
 language: node_js
 
-os:
-  - linux
-  - osx
-
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
+  - "10.15.3"
 
 script:
-  - npm install
   - npm run lint
+
+after_success:
+  - bash ./scripts/deploy.sh
