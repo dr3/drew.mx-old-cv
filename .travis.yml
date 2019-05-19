@@ -7,4 +7,4 @@ script:
   - npm run lint
 
 after_success:
-  - bash ./scripts/deploy
+  - bash ./scripts/deploy.sh
