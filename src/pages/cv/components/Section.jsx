@@ -6,7 +6,7 @@ const SectionTitle = styled.p`
   color: ${blue};
   font-weight: bold;
 
-  @media (max-width: 47rem) {
+  @media screen and (max-width: 47rem) {
     &::before {
       content: '';
       position: absolute;
@@ -27,12 +27,13 @@ const SectionTitle = styled.p`
 `;
 
 const StyledRow = styled.div`
-  @media (min-width: 47rem) {
+  position: relative;
+
+  @media print, (min-width: 47rem) {
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-column-gap: 1rem;
   }
-  position: relative;
 `;
 
 const StyledLine = styled.div`
@@ -40,7 +41,7 @@ const StyledLine = styled.div`
   background-color: ${blue};
   margin-top: 0.5rem;
 
-  @media (max-width: 47rem) {
+  @media screen and (max-width: 47rem) {
     display: none;
   }
 `;
@@ -49,13 +50,10 @@ const RowLabel = styled.div`
   text-align: right;
   margin-bottom: 0.8125rem;
 
-  @media (max-width: 47rem) {
+  @media screen and (max-width: 47rem) {
     font-weight: bold;
     text-align: initial;
-
-    & p {
-      margin: 0;
-    }
+    margin: 0;
   }
 `;
 

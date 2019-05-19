@@ -5,7 +5,7 @@ import Heading from './Heading';
 import Details from './Details';
 
 const StyledHeader = styled.div`
-  @media (min-width: 47rem) {
+  @media print, (min-width: 47rem) {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-column-gap: 1rem;
