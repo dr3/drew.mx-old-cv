@@ -28,5 +28,6 @@ module.exports = {
     'linebreak-style': process.platform === 'win32' ? 'off' : ['error', 'unix'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 'off', /* TODO: enable this and add prop types 🙈 */
   },
 };

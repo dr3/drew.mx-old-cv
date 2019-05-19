@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { rhythm } from '../utils/typography';
-import contactData from '../data/contact';
+import { githubUrl } from '../../data/config/site';
 
 const NavWrapper = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ const Navbar = () => (
   <NavWrapper>
     <NavInner>
       <Link to="/">Home</Link>
-      <a href={contactData.github.url} target="_new">
+      <a href={githubUrl} target="_new">
         Github
       </a>
       <Link to="/contact">Contact</Link>

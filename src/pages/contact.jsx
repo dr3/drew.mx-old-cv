@@ -1,14 +1,18 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import get from '../utils/deepGet';
 
 import Layout from '../components/Layout';
-import contactData from '../data/contact';
 
 const Contact = ({ data }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
   const siteDescription = get(['site', 'siteMetadata', 'title'], data);
+  const description = get(
+    ['allMarkdownRemark', 'edges', 0, 'node', 'html'],
+    data,
+  );
 
   return (
     <Layout>
@@ -20,21 +24,7 @@ const Contact = ({ data }) => {
 
       <h2>Contact</h2>
       <br />
-
-      {Object.keys(contactData).map(key => {
-        if (contactData[key]) {
-          return (
-            <p key={key}>
-              <b>{key}: </b>
-              <a href={contactData[key].url} target="_new">
-                {contactData[key].text || contactData[key].url}
-              </a>
-            </p>
-          );
-        }
-
-        return null;
-      })}
+      <div dangerouslySetInnerHTML={{ __html: description }} />
     </Layout>
   );
 };
@@ -47,6 +37,17 @@ export const query = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { type: { eq: "description" }, id: { eq: "contact" } }
+      }
+    ) {
+      edges {
+        node {
+          html
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
