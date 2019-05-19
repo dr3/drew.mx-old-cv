@@ -2,10 +2,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import get from '../../utils/deepGet';
+import get from '../utils/deepGet';
 
-import BlogList from '../../components/BlogList';
-import Layout from '../../components/Layout';
+import BlogList from '../components/BlogList';
+import Layout from '../components/Layout';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);

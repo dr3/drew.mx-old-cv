@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
@@ -14,7 +15,8 @@ const Heading = styled('h1')`
 const SiteIndex = ({ data }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
   const siteDescription = get(['site', 'siteMetadata', 'title'], data);
-  const posts = get(['allMarkdownRemark', 'edges'], data);
+  const posts = get(['blogPosts', 'edges'], data);
+  const description = get(['descriptions', 'edges', 0, 'node', 'html'], data);
 
   return (
     <Layout>
@@ -28,21 +30,7 @@ const SiteIndex = ({ data }) => {
           👋
         </span>
       </Heading>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu
-        dictum varius duis. Vestibulum lectus mauris ultrices eros in cursus
-        turpis. Blandit volutpat maecenas volutpat blandit aliquam etiam.
-        Sagittis purus sit amet volutpat. Nullam ac tortor vitae purus faucibus
-        ornare suspendisse. Vulputate sapien nec sagittis aliquam malesuada.
-        Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula
-        ullamcorper. Sit amet cursus sit amet dictum sit amet. Malesuada proin
-        libero nunc consequat interdum varius sit amet. Sed egestas egestas
-        fringilla phasellus faucibus scelerisque eleifend. Habitasse platea
-        dictumst quisque sagittis. Sem viverra aliquet eget sit amet tellus cras
-        adipiscing enim. Amet massa vitae tortor condimentum lacinia quis vel
-        eros donec.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: description }} /> 
       <br />
       {posts && <BlogList posts={posts} />}
       <Link to="/blog">See more blog posts →</Link>
@@ -60,7 +48,21 @@ export const query = graphql`
         description
       }
     }
-    allMarkdownRemark(
+    descriptions: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          type: { eq: "description" }
+          id: { eq: "homepage-welcome-message" }
+        }
+      }
+    ) {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+    blogPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { type: { eq: "post" } } }
       limit: 1
