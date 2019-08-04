@@ -2,9 +2,8 @@ module.exports = {
   name: 'Drew McMillan',
   title: 'Curriculum Vitae',
   userDetails: [
-    { label: 'Mailing Address', text: '26 Holly Walk' },
-    { text: 'Stratford Upon Avon' },
-    { text: 'CV379LR' },
+    { label: 'Based in', text: 'Marlybone, London' },
+    { label: 'Currently at', text: 'BBC News' },
     { label: 'Email', text: 'hello@mcmill.co.uk' },
     { label: 'Website', text: 'drew.mx' },
   ],
@@ -14,9 +13,9 @@ module.exports = {
       subsections: [
         {
           body: [
-            'Currently working to rebuild BBC article pages from the ground up, I am very a enthusiastic developer with hands on experience working on websites used by millions of users a month. I have experience with the full process of developing robust web applications from analysis and design though to development, testing and deploying.',
+            'Currently working to scale a React application across BBC World Service, I am very a enthusiastic developer with hands on experience working on websites used by millions of users a month. I have experience with the full process of developing robust web applications from analysis and design though to development, testing and deploying.',
             'Achieving a 1st in computer science in 2018, I have a large number of both technical and personal skills. I am very adaptable to new infrastructures and languages, quickly being able to develop new features and improve existing code. I have a wide range of personal skills such as time keeping, team work to ensure that I can develop effective software and write quality code.',
-            'Over the next few years I hope to build on my existing knowledge and perfect these skills even more, learn more technical languages, techniques and standards to forge myself a strong career in computing. I hope that what you read will put me in good stride to become an excellent member of your team.',
+            'Over the next few years I hope to continue to build both my technical and personal skills, mentoring others to become better developers themselves while continuing to force myself a strong career in software engineering. I hope that what you read will put me in good stride to become an excellent member, and senior software engineer, of your team.'
           ],
         },
       ],
@@ -25,39 +24,34 @@ module.exports = {
       title: 'Key Skills',
       subsections: [
         {
+          label: 'Creating effective software',
+          body: [
+            'Analysing product requirements I can lead decision making and development to meet the requirements in a timely and suitable manor. Understanding available technologies quickly I can lead others, weighing all opinions, to create effective software that is performant, scalable and accessible',
+          ],
+        },
+        {
           label: 'Adapting quickly',
           body: [
-            'When working in an agile team you can often move to a new software system when a new epic is begun. I am very strong at quickly understanding the new and unknown infrastructure, and developing within it.',
+            'When working in an agile team you can often move to a new software system when a new epic is begun. I am very strong at quickly understanding the new and unknown infrastructure, and developing within it. I strive to develop my skills as fast as possible and frequently explore new technologies to explore how they can be used to help serve our audience.',
           ],
         },
         {
-          label: 'Agile Methodologies',
+          label: 'Code analysis and review',
           body: [
-            'I have a strong understanding of the agile planning and delivery process, and how it can be best utilised to deliver a high quality product on time.',
-          ],
-        },
-        {
-          label: 'Software design',
-          body: [
-            'I am able to understand a brief given and make decisions on how to best approach the issue, debating various aspects and ensuring that all design decisions highly suit the application.',
-          ],
-        },
-        {
-          label: 'Growing progamming knowlege',
-          body: [
-            'Not only is the number of languages I am confident in constantly growing, I am constantly developing my understanding of how they can be best used to produce the highest quality product.',
+            'Being a code owner of our primary applications, I have repeatedly shown I can give constructive feedback on others’ code, foresee future issues that may arise and rapidly come up with solutions to fix them. Dealing with legacy code bases I can analyse which areas are suitable to reuse and weigh the cost of redevelopment to ensure we deliver the best product possible',
+            'Code reviews can be an important part of an engineers development. With a strong focus on helping others grow as a developer, I aim to provide good feedback during code reviews so that others can not only correct their code, but also learn from the process as much as possible.',
           ],
         },
         {
           label: 'Teamwork and Personal Skills',
           body: [
-            'I work well with a team and I am able to offer support where needed to team members to ensure that we work optimally to produce high quality software.',
+            'While I am currently a mid level developer, I have shown my ability to lead both team and application development. Having recently develivered successfully with a relatively inexperienced team, guiding their development and teaching where needed to grow both the team and myself.',
           ],
         },
         {
-          label: 'Problem solving',
+          label: 'Applying best practices',
           body: [
-            'When a problem presents itself I am able to quickly understand the issue and approach the solution before it becomes a large issue. This includes being able to effectively adapt and refactor a codebase to meet new briefs.',
+            'Constantly learning best practices, I am able to best solve problems using suitable technology to deliver user value. Using CD and versioning to deliver faster, ensuring best practices are followed in HTML semantics, React Js and caching are just a few of the many ways I have shown my ability to understand and apply technologies when suitable',
           ],
         },
       ],
@@ -70,6 +64,8 @@ module.exports = {
           title: 'Software Engineer - BBC News',
           body: [
             'Working with the latest in full stack Javascript to build the future of BBC article pages in ReactJS. Current work can be found at https://github.com/bbc/simorgh and https://github.com/bbc/psammead which are entirely opensource.',
+            'Key Project -',
+            'Simorgh - Originally on the core Articles team, I have become a central member of the Simorgh project. At its core it is an Isomorphic React application that serves articles, and now frontpages to users both in the UK and around the world. Delivering twice in just a few months, I have shown throughout this project not only strong technical ability but also leadership and the ability to mentor others. The second deliverable, BBC World Service Frontpages were delivered with a team inexperienced on the codebase. Through regular code reviews and many workshop sessions I helped guide us to delivering very rapidly.',
           ],
         },
         {
@@ -84,16 +80,6 @@ module.exports = {
           title: 'Trainee Web Developer - BBC News',
           body: [
             'Part of a technical team to produce new features, improvements and whole new sections of the BBC News website. I worked alongside journalists, project and product managers, designers, business analysts, testers and other developers. Working directly on the output of one of the world’s most successful news websites to a global audience of 100s of millions.',
-            'Key Projects -',
-            'Embedephant - Building a social media post backup system to be used on BBC News and World Service story pages. Working with a small team to evaluate the best approach to take from the start, and developing the system to most effectively and efficiently meet the brief. Accounting for user performace, ensuring stability and working with multiple other teams to integrate the application across the BBC News products.',
-            'CPS Migration and BAU - Moving BBC World Service pages to a new CMS, developing new features for audience of millions and improving the existing product to remove bugs and improve usability, ensuring that all pages were translated correctly into over 30 languages. Most notible change was when I single handly improved social sharing by over 80%',
-          ],
-        },
-        {
-          label: 'July 2012 – September 2015',
-          title: 'Waitrose & Virgin Media - Customer Service',
-          body: [
-            'Working during my studies to help serve customers by offering great customer service. During this time I improved my comunication and timekeeping skills.',
           ],
         },
       ],
@@ -113,24 +99,6 @@ module.exports = {
             'In competitive market user load times of a couple seconds can mean a large amount of the audience leave your site. I have a keen and growing interest in reducing this using methods such as caching, JavaScript bundling and developing to avoid bottlenecks, such as blocking JavaScript, where possible.',
           ],
         },
-        {
-          label: 'Serverless Node',
-          body: [
-            "At the BBC I spent a lot of time developing on 'Morph', which consists of thousands of micro-services deployed on a cloud infrastructure. I would love to go all the way into true serverless and expand on my existing knowledge. I have used serverless AWS Lambdas in the past, such as creating a prototype for a Korean content collator, which is now in production, but not anything directly.",
-          ],
-        },
-        {
-          label: 'React Native',
-          body: [
-            'Over the past couple years I have experimented with React Native and how it can be used to develop applications for both IOS and Android. The ability to comfortably do both as a web developer is brilliant and I would love the opportunity to expand my knowledge in the future.',
-          ],
-        },
-        {
-          label: 'Computer Vision',
-          body: [
-            'During my time at University I have had a lot of experience in Computer vision and how it can be used to understand the real world, I find this very interesting and would love to possibly use it on the web in the future.',
-          ],
-        },
       ],
     },
     {
@@ -145,46 +113,10 @@ module.exports = {
           ],
         },
         {
-          label: '2012 - 2014',
-          title: 'Stratford School 6th Form',
+          label: '2007 - 2014',
+          title: 'Stratford upon Avon School',
           body: [
-            'A Levels in Maths, Business Studies and ICT. AS Level in Physics',
-          ],
-        },
-        {
-          label: '2014-2012',
-          title: 'Stratford Upon Avon High School',
-          body: [
-            "12 GCSE's ranging from A* to B - A in Maths and Science and a B in English",
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Technical Skills',
-      subsections: [
-        {
-          label: 'Front end development',
-          body: [
-            'Detailed knowledge of JavaScript as well as being able to use the lastest HTML and CSS to develop great user experiences while considering backwards compatability with older browsers and adapting to the audience.',
-          ],
-        },
-        {
-          label: 'Programming',
-          body: [
-            'Able to quickly learn new languages and how to best use them for various applications. Strong in Clientside Javascript, React, Node.js, Ruby, PHP.',
-          ],
-        },
-        {
-          label: 'Version Control',
-          body: [
-            'Strong confidence using GIT to manage development and ensure that code I write is easily managed and up to date with the latest changes.',
-          ],
-        },
-        {
-          label: 'Cloud Computing',
-          body: [
-            'Able to utilize cloud computing to deploy large applications into production. Strong understanding of various technologies within AWS and how they can best be used to produce an end result.',
+            "A Levels in Maths, Business Studies and ICT. AS Level in Physics. 12 GCSE's ranging from A* to B - A in Maths and Science and a B in English",
           ],
         },
       ],
@@ -193,20 +125,21 @@ module.exports = {
       title: 'References',
       subsections: [
         {
-          title:
-            'Bogdan Dogaru - Software Engineering Team Lead (Current Team)',
+          title: 'Benjamin Hobbs - Software Engineering Manager (Web)',
           body: [
-            'ZONE 6B BBC, BBC Broadcasting House, Portland Pl, W1A1AA Bogdan.Dogaru@bbc.co.uk',
+            'ZONE 6B BBC, BBC Broadcasting House, Portland Pl, W1A1AA benjamin.hobbs@bbc.co.uk',
           ],
         },
         {
-          title:
-            'James Donohue - Software Engineering Team Lead (Previous Team)',
+          title: 'Amy Walker - Software Engineering Team Lead (News Web)',
           body: [
-            'ZONE 6B BBC, BBC Broadcasting House, Portland Pl, W1A1AA james.donohue@bbc.co.uk',
+            'ZONE 6B BBC, BBC Broadcasting House, Portland Pl, W1A1AA amy.walker01@bbc.co.uk',
           ],
         },
       ],
+    },
+    {
+      title: 'A copy of this CV can be found at https://drew.mx/cv',
     },
   ],
 };
