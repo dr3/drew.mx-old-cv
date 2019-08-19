@@ -15,7 +15,7 @@ module.exports = {
           body: [
             'Currently working to scale a React application across BBC World Service, I am very a enthusiastic developer working on websites used by millions of users a month. I have experience with the full process of developing robust web applications from analysis and design though to development, testing and deploying.',
             'Achieving a 1st in Computer Science in 2018, I have a large number of both technical and personal skills. I am very adaptable to new infrastructures and languages, quickly being able to develop new features and improve existing code. I have a wide range of personal skills such as time keeping, team work to ensure that I can develop effective software and write quality code.',
-            'Over the next few years I hope to continue to build both my technical and personal skills, mentoring others to become better developers themselves while continuing to force myself a strong career in software engineering. I hope that what you read will put me in good stride to become an excellent member, and senior software engineer, of your team.',
+            'Over the next few years I hope to continue to build both my technical and personal skills, mentoring others to become better developers themselves while continuing to force myself a strong career in software engineering. I hope that what you read will put me in good stride to become an excellent member and software engineer in your team.',
           ],
         },
       ],
