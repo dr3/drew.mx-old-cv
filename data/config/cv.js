@@ -3,7 +3,7 @@ module.exports = {
   title: 'Curriculum Vitae',
   userDetails: [
     { label: 'Based in', text: 'Marlybone, London' },
-    { label: 'Currently at', text: 'BBC News' },
+    { label: 'Currently at', text: 'Trainline' },
     { label: 'Email', text: 'hello@mcmill.co.uk' },
     { label: 'Website', text: 'drew.mx' },
   ],
@@ -13,7 +13,7 @@ module.exports = {
       subsections: [
         {
           body: [
-            'Currently working to scale a React application across BBC World Service, I am very a enthusiastic developer working on websites used by millions of users a month. I have experience with the full process of developing robust web applications from analysis and design though to development, testing and deploying.',
+            'Currently working to improve the travel experience across the EU at Trainline, I am very a enthusiastic developer working on websites used by millions of users a month. I have experience with the full process of developing robust web applications from analysis and design though to development, testing and deploying.',
             'Achieving a 1st in Computer Science in 2018, I have a large number of both technical and personal skills. I am very adaptable to new infrastructures and languages, quickly being able to develop new features and improve existing code. I have a wide range of personal skills such as time keeping, team work to ensure that I can develop effective software and write quality code.',
             'Over the next few years I hope to continue to build both my technical and personal skills, mentoring others to become better developers themselves while continuing to force myself a strong career in software engineering. I hope that what you read will put me in good stride to become an excellent member and software engineer in your team.',
           ],
@@ -59,7 +59,12 @@ module.exports = {
       title: 'Employment',
       subsections: [
         {
-          label: 'November 2018 – Now',
+          label: 'November 2019 – Now',
+          title: 'Web Engineer - Trainline',
+          body: [],
+        },
+        {
+          label: 'November 2018 – November 2019',
           title: 'Software Engineer - BBC News',
           body: [
             'Working with the latest in full stack Javascript to build the future of BBC article pages in ReactJS. Current work can be found at https://github.com/bbc/simorgh and https://github.com/bbc/psammead which are entirely opensource.',
