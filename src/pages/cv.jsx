@@ -1,4 +1,4 @@
-/* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger, react/jsx-props-no-spreading */
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Helmet from 'react-helmet';

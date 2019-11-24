@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import get from '../utils/deepGet';
@@ -10,7 +10,7 @@ const Heading = styled.h3`
 `;
 
 const Bio = ({ posts }) => (
-  <Fragment>
+  <>
     {posts.map(({ node }) => {
       const title =
         get(['frontmatter', 'title'], node) ||
@@ -28,7 +28,7 @@ const Bio = ({ posts }) => (
         </div>
       );
     })}
-  </Fragment>
+  </>
 );
 
 export default Bio;

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import Hemlet from 'react-helmet';
@@ -66,11 +66,11 @@ const SiteIndex = ({ data }) => {
         <DescriptionImage src={profilePic} alt={author} />
       </DescriptionWrapper>
       {posts[0] && (
-        <Fragment>
+        <>
           <br />
           <BlogList posts={posts} />
           <Link to="/blog">See more blog posts →</Link>
-        </Fragment>
+        </>
       )}
     </Layout>
   );
