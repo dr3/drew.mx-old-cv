@@ -7,8 +7,9 @@ import Details from './Details';
 const StyledHeader = styled.div`
   @media print, (min-width: 47rem) {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-column-gap: 1rem;
+    margin: 1rem;
   }
 `;
 

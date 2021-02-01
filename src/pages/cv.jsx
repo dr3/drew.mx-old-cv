@@ -15,6 +15,31 @@ const GlobalStyle = createGlobalStyle`
     size: auto;
     margin: 0mm 0mm 0mm 0mm;
   }
+
+  a {
+    color: inherit; 
+  }
+
+  @media print {
+    p, div {
+      font-size: 9pt !important;
+      line-height: 11pt !important;
+    }
+
+    .styledRow {
+      grid-template-columns: 1fr 9fr !important;
+    }
+
+    body {
+      margin-top: 40px;
+    }
+  }
+
+  * {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 `;
 
 const Contact = ({ data }) => {

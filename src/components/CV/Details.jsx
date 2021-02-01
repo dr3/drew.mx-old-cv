@@ -4,7 +4,6 @@ import { blue } from './utils';
 
 const Wrapper = styled.div`
   align-self: center;
-  margin-top: 2.4375rem;
 `;
 
 const DetailWrapper = styled.div`
@@ -20,10 +19,15 @@ const Label = styled.span`
 const Details = ({ values }) => (
   <Wrapper>
     {values &&
-      values.map(({ label, text }) => (
+      values.map(({ label, text, href }) => (
         <DetailWrapper key={label || text}>
           {label && <Label>{label}: </Label>}
-          {text && <span>{text}</span>}
+          {text && !href && <span>{text}</span>}
+          {href && text && (
+            <span>
+              <a href={href}>{text}</a>
+            </span>
+          )}
         </DetailWrapper>
       ))}
   </Wrapper>

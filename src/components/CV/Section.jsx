@@ -57,17 +57,57 @@ const RowLabel = styled.div`
   }
 `;
 
-const SubsectionTitle = styled.p`
-  margin: 0;
-  font-weight: bold;
+const RowLabelRange = styled.div`
+  text-align: right;
+  margin-bottom: 0.8125rem;
+  display: grid;
+
+  @media screen and (max-width: 47rem) {
+    font-weight: bold;
+    text-align: initial;
+    margin: 0;
+  }
 `;
 
-const Row = ({ label, children }) => (
-  <StyledRow>
-    <RowLabel>{label}</RowLabel>
-    <div>{children}</div>
-  </StyledRow>
-);
+const SubsectionTitle = styled.p`
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25rem;
+  display: inline-block;
+`;
+
+const BlockSpan = styled.div`
+  display: block;
+`;
+
+const Row = ({ label, labelRange = [], children }) => {
+  const LabelWrapper = label ? RowLabel : RowLabelRange;
+
+  const showLabelRange = !label && labelRange && labelRange[0] && labelRange[1];
+
+  return (
+    <StyledRow className="styledRow">
+      <LabelWrapper>
+        {label}
+        {showLabelRange && (
+          <div>
+            <BlockSpan>{labelRange[0]}</BlockSpan>
+            <BlockSpan>- {labelRange[1]}</BlockSpan>
+          </div>
+        )}
+      </LabelWrapper>
+      <div>{children}</div>
+    </StyledRow>
+  );
+};
+
+const TechStack = styled.div`
+  margin-bottom: 13px;
+  font-style: italic;
+  font-size: 0.9rem;
+`;
 
 const Section = ({ title, subsections }) => {
   const Line = <StyledLine />;
@@ -80,14 +120,45 @@ const Section = ({ title, subsections }) => {
         </SectionTitle>
       </Row>
       {subsections &&
-        subsections.map(({ label, title: subsectionTitle, body }) => (
-          <Row label={label} key={label || subsectionTitle || body[0]}>
-            {subsectionTitle && (
-              <SubsectionTitle>{subsectionTitle}</SubsectionTitle>
-            )}
-            {body && body.map(text => <p key={text}>{text}</p>)}
-          </Row>
-        ))}
+        subsections.map(
+          ({
+            label,
+            labelRange,
+            title: subsectionTitle,
+            techStack,
+            body,
+            bodyList,
+          }) => (
+            <Row
+              label={label}
+              labelRange={labelRange}
+              key={
+                label ||
+                (labelRange && labelRange[0]) ||
+                subsectionTitle ||
+                body[0]
+              }
+            >
+              {subsectionTitle && (
+                <SubsectionTitle>{subsectionTitle}</SubsectionTitle>
+              )}
+              {body && !bodyList && body.map(text => <p key={text}>{text}</p>)}
+              {bodyList && (
+                <ul>
+                  {bodyList.map(text => (
+                    <li key={text}>{text}</li>
+                  ))}
+                </ul>
+              )}
+              {techStack && (
+                <TechStack>
+                  <b>Tech Stack: </b>
+                  {techStack.join(', ')}
+                </TechStack>
+              )}
+            </Row>
+          ),
+        )}
     </div>
   );
 };
