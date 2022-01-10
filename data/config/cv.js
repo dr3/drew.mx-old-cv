@@ -1,8 +1,8 @@
 module.exports = {
   name: 'Drew McMillan',
-  title: 'Fullstack Software Engineer',
+  title: 'Senior Fullstack Software Engineer (Web)',
   userDetails: [
-    { label: 'Based in', text: 'London & Dubai' },
+    { label: 'Based in', text: 'London, UK' },
     {
       label: 'Email',
       text: 'hello@mcmill.co.uk',
@@ -30,7 +30,23 @@ module.exports = {
       title: 'Employment',
       subsections: [
         {
-          labelRange: ['Feb 2021', 'Now'],
+          labelRange: ['June 2021', 'Now'],
+          title: 'Senior Web Engineer - Trainline',
+          bodyList: [
+            'Working to create a new GraphQL gateway from existing REST APIs to refactor large parts of our website. Using Relay to improve performance, dev experience and code quality across a large booking flow application.',
+          ],
+          techStack: [
+            'Typescript',
+            'GraphQL (Relay, Mesh)',
+            'React',
+            'Node',
+            'Webpack',
+            'Redux',
+            'Babel',
+          ],
+        },
+        {
+          labelRange: ['Feb 2021', 'May 2021'],
           title: 'Software Engineer - Garaji',
           bodyList: [
             'With a small team we rebuilt the tech stack from the bottom up to create multiple apps and webpages using a single code base.',
