@@ -5,4 +5,5 @@
 <url> <loc>https://drew.mx/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://drew.mx/cv/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://drew.mx/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://drew.mx/photos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
