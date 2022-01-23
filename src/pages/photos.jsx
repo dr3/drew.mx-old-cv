@@ -38,6 +38,9 @@ const Img = styled.img`
   max-height: 45rem;
   margin: 1rem auto;
   display: block;
+  aspect-ratio: ${props => props.dimensions[0]} /
+    ${props => props.dimensions[1]};
+  background-color: #f1f1f1;
 `;
 
 const Photos = ({ data }) => {
@@ -57,8 +60,8 @@ const Photos = ({ data }) => {
       />
       <div>
         {photos.map(img => (
-          <a href={img.src} key={img.src}>
-            <Img src={img.src} alt={img.alt} />
+          <a href={img.src} key={img.src} dimensions={img.dimensions}>
+            <Img src={img.src} alt={img.alt} dimensions={img.dimensions} />
           </a>
         ))}
       </div>
