@@ -43,6 +43,12 @@ const Img = styled.img`
   background-color: #f1f1f1;
 `;
 
+const Text = styled.p`
+  text-align: center;
+  color: #767375;
+  font-size: 12px;
+`;
+
 const Photos = ({ data }) => {
   const siteTitle = get(['site', 'siteMetadata', 'title'], data);
   const siteDescription = get(['site', 'siteMetadata', 'title'], data);
@@ -59,6 +65,9 @@ const Photos = ({ data }) => {
         title={`Photos | ${siteTitle}`}
       />
       <div>
+        <Text>
+          All photos taken with a Fujifilm X100S and edited using Lightroom
+        </Text>
         {photos.map(img => (
           <a href={img.src} key={img.src} dimensions={img.dimensions}>
             <Img src={img.src} alt={img.alt} dimensions={img.dimensions} />
