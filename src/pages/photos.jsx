@@ -57,7 +57,9 @@ const Photos = ({ data }) => {
       />
       <div>
         {photos.map(img => (
-          <Img src={img.src} key={img.src} alt={img.alt} />
+          <a href={img.src} key={img.src}>
+            <Img src={img.src} alt={img.alt} />
+          </a>
         ))}
       </div>
       <div dangerouslySetInnerHTML={{ __html: description }} />

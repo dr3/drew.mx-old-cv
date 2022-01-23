@@ -45,7 +45,7 @@ const Navbar = () => (
         Github
       </a>
       <Link to="/contact">Contact</Link>
-      <Link to="/blog">Blog</Link>
+      <Link to="/photos">Photos</Link>
       <LinkHiddenMobile to="/cv">CV</LinkHiddenMobile>
     </NavInner>
   </NavWrapper>
