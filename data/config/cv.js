@@ -33,7 +33,7 @@ module.exports = {
           labelRange: ['June 2021', 'Now'],
           title: 'Senior Web Engineer - Trainline',
           bodyList: [
-            'Working to create a new GraphQL gateway from existing REST APIs to refactor large parts of our website. Using Relay to improve performance, dev experience and code quality across a large booking flow application.',
+            'Working to create a new GraphQL gateway application, surfacing data from existing REST APIs to refactor large parts of our website. Using Relay to improve performance, dev experience and code quality across a large booking flow application.',
           ],
           techStack: [
             'Typescript',
