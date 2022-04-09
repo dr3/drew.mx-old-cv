@@ -46,6 +46,21 @@ module.exports = {
           ],
         },
         {
+          labelRange: ['Feb 2022', 'Now'],
+          title: 'Volunteer Software Engineer - Good Thinking Society',
+          bodyList: [
+            'Part-time volunteer role working on parallel.org.uk. Currently building a brand new application stack for interactive live events using GraphQL Subscriptions.',
+          ],
+          techStack: [
+            'GraphQL (Relay)',
+            'React',
+            'AWS AppSync',
+            'AWS DynamoDB',
+            'AWS Lambda',
+            'CloudFront',
+          ],
+        },
+        {
           labelRange: ['Feb 2021', 'May 2021'],
           title: 'Software Engineer - Garaji',
           bodyList: [
@@ -123,26 +138,6 @@ module.exports = {
             'React',
             'Node',
             'Ruby',
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Volunteering',
-      subsections: [
-        {
-          labelRange: ['Feb 2022', 'Now'],
-          title: 'Volunteer Software Engineer - Good Thinking Society',
-          bodyList: [
-            'Part-time volunteer role working on parallel.org.uk. Currently building a brand new application stack for interactive live events using GraphQL Subscriptions.',
-          ],
-          techStack: [
-            'GraphQL (Relay)',
-            'React',
-            'AWS AppSync',
-            'AWS DynamoDB',
-            'AWS Lambda',
-            'CloudFront',
           ],
         },
       ],
