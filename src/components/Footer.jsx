@@ -28,9 +28,12 @@ const SeparatorSpan = styled.span`
 const Footer = () => (
   <FooterWrapper>
     <span>
-      Built with&nbsp;
-      <a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">
-        GatsbyJS
+      <a href="https://twitter.com/drewmcmill">Twitter</a>
+    </span>
+    <SeparatorSpan aria-hidden>&nbsp;&#45;&nbsp;</SeparatorSpan>
+    <span>
+      <a rel="me" href="https://mastodon.social/@dr3w">
+        Mastodon
       </a>
     </span>
     <SeparatorSpan aria-hidden>&nbsp;&#45;&nbsp;</SeparatorSpan>
