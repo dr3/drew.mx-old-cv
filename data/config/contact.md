@@ -3,7 +3,7 @@ id: contact
 type: description
 ---
 
-Feel free to send me a message, I would love to grab a coffee (or tea)!
+Feel free to send me a message, I would love to grab a coffee!
 
 **twitter:** [@drewmcmill](https://twitter.com/drewmcmill)  
 
@@ -21,7 +21,9 @@ Feel free to send me a message, I would love to grab a coffee (or tea)!
 
 **mastodon:** [@dr3w@mastodon.social](https://mastodon.social/@dr3w)  
 
-**npm:** [@dr3](https://www.linkedin.com/in/dr3)  
+**npm:** [@dr3](https://www.npmjs.com/~dr3)  
+
+**monzo:** [drewmcmillan](https://monzo.me/drewmcmillan) 
 
 **paypal:** [drewmcmill](https://www.paypal.me/drewmcmill)  
 
