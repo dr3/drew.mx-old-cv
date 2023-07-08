@@ -21,7 +21,9 @@ Feel free to send me a message, I would love to grab a coffee!
 
 **mastodon:** [@dr3w@mastodon.social](https://mastodon.social/@dr3w)  
 
-**npm:** [@dr3](https://www.npmjs.com/~dr3)  
+**npm:** [@dr3](https://www.npmjs.com/~dr3) 
+
+**discord:** [@drew.mx](https://discord.com/users/238754403069198338) 
 
 **monzo:** [drewmcmillan](https://monzo.me/drewmcmillan) 
 
